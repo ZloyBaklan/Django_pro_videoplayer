@@ -4,25 +4,76 @@
   <title>Тестовый плеер</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/font-awesome/css/all.min.css">
+  <style>
+  .js-play-button{
+    color: bisque; 
+    cursor: pointer; 
+    background-color: black;
+  }
+  .js-pause-button{
+    color: bisque;
+    cursor: pointer;
+    background-color: black;
+  }
+  .js-volume-button{
+    color: bisque;
+    cursor: pointer;
+    background-color: black;
+  }
+  .js-mute-button{
+    color: bisque;
+    cursor: pointer;
+    background-color: black;
+  }
+  .js-fullscreen-button{
+    color: bisque;
+    cursor: pointer;
+    background-color: black;
+  }
+  .js-video-container{
+    width: 100%;
+    height: 100%; 
+    border-style: solid;
+  }
+  .js-progress{
+    background-color: grey;
+    cursor: progress;
+  }
+  .js-progress-slider{
+    background-color: lightskyblue;
+  }
+  .js-progress{
+    background-color: black;
+    color: antiquewhite
+  }
+  .body-player{
+    width: 100%;
+    background-color: black;
+    border-style: solid;
+  }
+  .main-size{
+    width: 800px;
+    height: 600px;
+  }
+  </style>
+
+  Нужно перепилить под классы div все стили и вынести их сюда
+
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
+  <div id="player" class = "main-size">
 
-    <div class="js-video-container" style="width: 100%; height: 100%; border-style: solid;" ></div>
-    <div style= "width: 100%; background-color: black; border-style: solid;">
-      <button class="js-play-button" style = "color:bisque; cursor: pointer; background-color: black;"><i class="fa fa-play", style="color: darkgreen;" , aria-hidden="true"></i> Play</button>
-      <button class="js-pause-button" hidden style = "color:bisque; cursor: pointer; background-color: black;"><i class="fa fa-pause", style="color: darkgoldenrod" , aria-hidden="true"></i> Pause</button>
-      <button class="js-volume-button" style = "color:bisque; cursor: pointer; background-color: black;"><i class="fa fa-volume-off", style = "color: antiquewhite;", aria-hidden="true"></i> UnMute</button>
-      <button class="js-mute-button" hidden style = "color:bisque; cursor: pointer; background-color: black;"><i class="fa fa-volume-up", style = "color: antiquewhite;", aria-hidden="true"></i> Mute</button>
-      <button class="js-fullscreen-button" style = "color:bisque; cursor: pointer; background-color: black;"><i class="fa fa-arrows-alt", style = "color: antiquewhite;", aria-hidden="true"></i> Fullscreen</button>
-    </div>
-    <div class="js-progress" style= "background-color: grey; cursor: progress;">
-      <div class="js-progress-slider" style="background-color: lightskyblue;">ProgressBar</div>
-    </div>
-    <div style="color: darkred;">
-      <span class="js-current-time"></span>
-      —
-      <span class="js-duration"></span>
+    <div class="js-video-container"></div>
+    <div class="body-player">
+      <button class="js-play-button"><i class="fa fa-play", style="color: darkgreen;" , aria-hidden="true"></i>Play</button>
+      <button class="js-pause-button" hidden><i class="fa fa-pause", style="color: darkgoldenrod" , aria-hidden="true"></i> Pause</button>
+      <button class="js-volume-button"><i class="fa fa-volume-off", style = "color: antiquewhite;", aria-hidden="true"></i> UnMute</button>
+      <button class="js-mute-button" hidden><i class="fa fa-volume-up", style = "color: antiquewhite;", aria-hidden="true"></i> Mute</button>
+      <button class="js-fullscreen-button"><i class="fa fa-arrows-alt", style = "color: antiquewhite;", aria-hidden="true"></i> Fullscreen</button>
+      <div class="js-progress">
+        <span class="js-current-time"></span>—<span class="js-duration"></span>
+        <div class="js-progress-slider">progress</div>
+      </div>
     </div>
   </div>
 
