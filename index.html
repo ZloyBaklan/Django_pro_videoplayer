@@ -11,11 +11,11 @@
     <div class="js-video-container" style="width: 100%; height: 100%; border-style: solid;" ></div>
 
     <div>
-      <button class="js-play-button" style = "border-style: none;"><i class="fa fa-play", style="color: darkgreen;" , aria-hidden="true"></i> Play</button>
-      <button class="js-pause-button" hidden><i class="fa fa-pause", style="color: darkgoldenrod" , aria-hidden="true"></i> Pause</button>
-      <button class="js-volume-button">UnMute</button>
-      <button class="js-mute-button" hidden>Mute</button>
-      <button class="js-fullscreen-button">Fullscreen</button>
+      <button class="js-play-button" style = "border-style: none; cursor: pointer;"><i class="fa fa-play", style="color: darkgreen;" , aria-hidden="true"></i> Play</button>
+      <button class="js-pause-button" hidden style = "cursor: pointer;"><i class="fa fa-pause", style="color: darkgoldenrod" , aria-hidden="true"></i> Pause</button>
+      <button class="js-volume-button" style = "cursor: pointer;">UnMute</button>
+      <button class="js-mute-button" hidden style = "cursor: pointer;">Mute</button>
+      <button class="js-fullscreen-button" style = "cursor: pointer;">Fullscreen</button>
     </div>
     <div style="color: darkred;">
       <span class="js-current-time"></span>
@@ -23,9 +23,9 @@
       <span class="js-duration"></span>
     </div>
 
-    <div class="js-progress" style="background-color: grey;">
+    <div class="js-progress" style="background-color: grey; cursor: progress;">
       <i class="fa fa-camera-retro fa-2x"></i>
-      <div class="js-progress-slider" style="background-color: lightskyblue">ProgressBar</div>
+      <div class="js-progress-slider" style="background-color: lightskyblue;">ProgressBar</div>
     </div>
   </div>
 
