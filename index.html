@@ -33,7 +33,7 @@
   .js-video-container{
     width: 100%;
     height: 100%; 
-    border-style: solid;
+    display: flex;
   }
   .js-progress{
     background-color: grey;
@@ -47,21 +47,22 @@
     color: antiquewhite
   }
   .body-player{
-    width: 100%;
     background-color: black;
     border-style: solid;
+    display: flex;
+    flex-direction: column;
   }
   .main-size{
-    width: 800px;
-    height: 600px;
     box-shadow:  10px 10px 10px 10px rgb(83, 81, 81);
   }
-
   </style>
 
 </head>
 <body>
-  <div id="player" class = "main-size">
+  <div id="player" class = "main-size" style ="
+  display: flex; width: 800px; flex-direction: column;
+  border-style: solid;
+  height: 600px;">
 
     <div class="js-video-container"></div>
     <div class="body-player">
