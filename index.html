@@ -39,6 +39,7 @@
     background-color: black;
     font-size: 150%;
     margin: 10px;
+    display:flex;
   }
   .js-video-container{
     width: 100%;
@@ -54,36 +55,60 @@
   }
   .js-progress{
     background-color: black;
-    color: antiquewhite
+    color: antiquewhite;
   }
   .body-player{
     background-color: black;
     border-style: solid;
     display: flex;
-
+    flex-direction: column;
   }
   .main-size{
+    display: flex;
+    width: 800px;
+    flex-direction: column;
+    border-style: solid;
+    height: 600px;
     box-shadow:  10px 10px 10px 10px rgb(83, 81, 81);
+  }
+  .buttons{
+    display: flex;
+  }
+  .empty-buttons-space{
+    display: flex;
+    flex-grow: 2;
+  }
+  .js-progress-slider{
+    display:flex;
   }
   </style>
 
 </head>
 <body>
-  <div id="player" class = "main-size" style ="
-  display: flex; width: 800px; flex-direction: column;
-  border-style: solid;
-  height: 600px;">
+  <div id="player" class = "main-size">
 
     <div class="js-video-container"></div>
     <div class="body-player">
-      <button class="js-play-button"><i class="fa fa-play", style="color: darkgreen;" , aria-hidden="true"></i> Play </button>
-      <button class="js-pause-button" hidden><i class="fa fa-pause", style="color: darkgoldenrod" , aria-hidden="true"></i> Pause </button>
-      <button class="js-volume-button"><i class="fa fa-volume-off", style = "color: antiquewhite;", aria-hidden="true"></i> UnMute </button>
-      <button class="js-mute-button" hidden><i class="fa fa-volume-up", style = "color: antiquewhite;", aria-hidden="true"></i> Mute </button>
-      <button class="js-fullscreen-button"><i class="fa fa-arrows-alt", style = "color: antiquewhite;", aria-hidden="true"></i> Fullscreen </button>
+      <div class="buttons">
+      <button class="js-play-button">
+        <i class="fa fa-play", style="color: darkgreen;" , aria-hidden="true"></i>
+       </button>
+      <button class="js-pause-button" hidden>
+        <i class="fa fa-pause", style="color: darkgoldenrod" , aria-hidden="true"></i>
+       </button>
+      <button class="js-volume-button">
+        <i class="fa fa-volume-off", style = "color: antiquewhite;", aria-hidden="true"></i>
+      </button>
+      <button class="js-mute-button" hidden>
+        <i class="fa fa-volume-up", style = "color: antiquewhite;", aria-hidden="true"></i>
+      </button>
+      <div class = "empty-buttons-space"> </div>
+      <button class="js-fullscreen-button">
+        <i class="fa fa-arrows-alt", style = "color: antiquewhite;", aria-hidden="true"></i>
+      </button>
+      </div>
       <div class="js-progress">
-        <span class="js-current-time"></span>—<span class="js-duration"></span>
-        <div class="js-progress-slider">progress</div>
+      <div class="js-progress-slider"><span class="js-current-time"></span>-<span class="js-duration"></span></div>
       </div>
     </div>
   </div>
@@ -95,7 +120,6 @@
   <script type="text/javascript">
     createPlayer({
       elementId: 'player',
-      src: 'https://dvmn.org/media/filer_public/d0/16/d016d9b8-4180-4bb9-ad83-0241f61627b8/samsung_demo_-_alive_in_color.mp4',
     });
   </script>
 
